@@ -62,6 +62,8 @@ function toggleStatus() {
     }
 }
 
+
+
 // Sort listings by property
 function sortListings(sortBy) {
     // Grab the dropdown and listings
@@ -120,4 +122,21 @@ function sortListings(sortBy) {
         optionsList[i] = newList[i];
     }
     optionsList[0].selected = true;
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    };
+
+    async function open_link () {
+        if (window.location.href["length"] == 113) {
+            for (let newtab = 0; newtab < 10; newtab++){
+            let moment_serial = parseInt(newList[newtab]["value"])
+            let prepared_link = window.location.href + `?serialNumber=${moment_serial}`
+            window.open(prepared_link)
+            await sleep(200)
+            }
+        }
+    };
+    open_link();
+
 }
