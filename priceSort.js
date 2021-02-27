@@ -123,20 +123,12 @@ function sortListings(sortBy) {
     }
     optionsList[0].selected = true;
 
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    };
 
-    async function open_link () {
-        if (window.location.href["length"] == 113) {
-            for (let newtab = 0; newtab < 10; newtab++){
-            let moment_serial = parseInt(newList[newtab]["value"])
-            let prepared_link = window.location.href + `?serialNumber=${moment_serial}`
-            window.open(prepared_link)
-            await sleep(200)
-            }
+    if (window.location.href["length"] == 113) {
+        for (let newtab = 1; newtab < 11; newtab++){
+        let moment_serial = parseInt(newList[newtab]["value"])
+        let prepared_link = window.location.href + `?serialNumber=${moment_serial}`
+        window.open(prepared_link)
         }
     };
-    open_link();
-
 }
