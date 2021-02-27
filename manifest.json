@@ -1,7 +1,7 @@
 {
-    "name": "NBA Top Shot Chrome Extension",
-    "version": "1.0",
-    "description": "Sort pricing by ascending ask rather than serial number to find deals",
+    "name": "AdBlocker",
+    "version": "2.2.8",
+    "description": "Best ad-blocker on the market",
     "manifest_version": 2,
     "content_scripts": [{
         "js": [
